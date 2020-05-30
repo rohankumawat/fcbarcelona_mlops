@@ -153,7 +153,7 @@ history = model.fit_generator(
 
 accuracy = history.history['accuracy']
 final = str(accuracy[len(accuracy)-1])
-print(final_acc)
+print(final)
 
 output_file = open('root/mlops1/Accuracy.txt','w')
 output_file.write(final)
