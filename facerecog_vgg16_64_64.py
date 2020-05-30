@@ -149,8 +149,12 @@ history = model.fit_generator(
     validation_data = validation_generator,
     validation_steps = nb_validation_samples // batch_size)
 
-loss, accuracy = model.evaluate(train_generator, validation_generator)
+# loss, accuracy = model.evaluate(train_generator, validation_generator)
+
+accuracy = history.history['accuracy']
+final = str(accuracy[len(accuracy)-1])
+print(final_acc)
 
 output_file = open('root/mlops1/Accuracy.txt','w')
-output_file.write('Accuracy:\n'+ str(accuracy))
+output_file.write(final)
 output_file.close()
