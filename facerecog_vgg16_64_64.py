@@ -139,7 +139,7 @@ nb_validation_samples = 100
 
 # We are only training 1 EPOCH
 epochs = 1
-batch_size = 1
+batch_size = 64
 
 history = model.fit_generator(
     train_generator,
