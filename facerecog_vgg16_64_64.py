@@ -149,7 +149,7 @@ history = model.fit_generator(
     validation_data = validation_generator,
     validation_steps = nb_validation_samples // batch_size)
 
-loss, accuracy = model.evaluate(X_train, y_train)
+loss, accuracy = model.evaluate(train_generator, validation_generator)
 
 output_file = open('Accuracy.text','w')
 output_file.write('Accuracy:\n'+ str(accuracy))
