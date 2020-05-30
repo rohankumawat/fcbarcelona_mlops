@@ -151,6 +151,6 @@ history = model.fit_generator(
 
 loss, accuracy = model.evaluate(train_generator, validation_generator)
 
-output_file = open('Accuracy.text','w')
+output_file = open('root/mlops1/Accuracy.txt','w')
 output_file.write('Accuracy:\n'+ str(accuracy))
 output_file.close()
